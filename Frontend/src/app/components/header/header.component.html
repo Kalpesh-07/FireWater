@@ -1,0 +1,98 @@
+<div class="wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <p class="mb-0 phone pl-md-2">
+          <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
+          <a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-md-end">
+        <div class="social-media mr-4">
+          <p class="mb-0 d-flex">
+            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+          </p>
+        </div>
+        <div class="reg">
+          <p class="mb-0"><a [routerLink]="['/signup']" routerLinkActive="router-link-active"  class="mr-2">Sign Up</a> <a [routerLink]="['/signin']" routerLinkActive="router-link-active" >Log In</a></p>
+        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="/assets/images/fire.jpg" alt="firewater" style="width: 50px; height: 50px;"> <img src="/assets/images/Firewater-text.jpg" alt="firewater" style="width: 200px; height: 50px; margin-left: 10px;"></a>
+        <div class="order-lg-last btn-group">
+          <a href="#" class="btn-cart dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="flaticon-shopping-bag"></span>
+        
+            <div class="d-flex justify-content-center align-items-center" *ngIf="cartData.data[0].product !== undefined"><small>{{cartData.data.length}}</small></div>
+          </a>
+          <!-- <div class="dropdown-menu dropdown-menu-right" *ngIf="cartData.data[0].product === undefined">
+            <div class="cart-btns" style="background-color:rgb(165, 174, 190);">
+              <h3 style="margin-left: 30px; color: rgb(10, 1, 1); font-weight: 700;">Your Cart is Empty</h3>
+              <a routerLink="/allproducts" style="width: 100%;">Go To Shop</a>
+             
+            </div>
+
+          </div> -->
+
+          <div class="dropdown-menu dropdown-menu-right">
+            
+            <div class="dropdown-item d-flex align-items-start" *ngFor="let c of cartData.data; let i=index" href="#">
+              <div class="cart-btns" style="background-color:rgb(165, 174, 190);padding: 0;" *ngIf="c.product === undefined">
+                <h3 style="margin-left: 20px; color: rgb(10, 1, 1); font-weight: 700;">Your Cart is Empty</h3>
+                <a routerLink="/allproducts" style="width: 100%;">Go To Shop</a>
+               
+              </div>
+              <div class="img"  *ngIf="c.product !== undefined">
+                <img [src]="c.product.image" alt="{{c.product.name}}" width="70" height="70" class="order-1">
+              </div>
+              <div class="text pl-3"  *ngIf="c.product !== undefined">
+                <h4>{{c.product.name}}</h4>
+                <p class="mb-0"><a href="#" class="price">{{c.product.price | currency:'USD'}}</a><span class="quantity ml-3">Quantity : {{c.numInCart}}</span></p>
+              </div>
+            </div>
+            <div class="cart-btns" *ngIf="cartData.data[0].product !== undefined">
+              <a routerLink="/cart">View Cart</a>
+              <a routerLink="/checkout">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+            
+            <!-- <a class="dropdown-item text-center btn-link d-block w-100" href="cart.html">
+              View All
+              <span class="ion-ios-arrow-round-forward"></span>
+            </a> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+        </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="dropdown04" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown04">
+            <a class="dropdown-item" routerLink="/allproducts">Products</a>
+            <a class="dropdown-item" href="product-single.html">Single Product</a>
+            <a class="dropdown-item" routerLink="/cart">Cart</a>
+            <a class="dropdown-item" routerLink="/checkout">Checkout</a>
+          </div>
+        </li>
+        
+        
+       
+        <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END nav -->

@@ -1,0 +1,88 @@
+
+.help-block{
+margin-top: -30px;
+margin-left: 30px;
+margin-right: 35px;
+color:red;
+font-weight: 700;
+}
+input.ng-invalid.ng-touched {
+    border: 3px solid red;
+} 
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #405D9D;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #314879;
+}
+
+.btn-twitter {
+    background: #42AEEC;
+    border: none;
+}
+
+.main{
+    /* background-image: url("/assets/images/kind-6.jpg"); */
+    background:  linear-gradient(rgba(49, 49, 49, 0.5), rgba(27, 26, 26, 0.5)),url("/assets/images/kind-6.jpg");
+    margin-top : 70px;
+    
+}
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #1799e4;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+}
+
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.input-group{
+    height: 50px;
+    margin-bottom: -50px;
+    
+}
+
+input{
+    border-radius: 20px;
+}
+
+
+

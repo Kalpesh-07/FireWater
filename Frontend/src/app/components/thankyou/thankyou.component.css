@@ -1,0 +1,26 @@
+th{
+    font-weight: 700;
+    color: black;
+    font-size: 30px;
+    border-bottom: 4px solid #3c3f4a;
+    border-right: 4px solid #3c3f4a;
+}
+
+td{
+    font-weight: 500;
+    color: black;
+    font-size: 23px;
+    border-bottom: 4px solid #3c3f4a;
+   
+}
+.table tbody td {
+    border: none;
+    padding: 30px;
+    background: #fff;
+    border-bottom: 4px solid #17181b;
+    vertical-align: middle;
+    border-right: 4px solid #3c3f4a;
+}
+tr{
+    border: 3px solid black;
+}
