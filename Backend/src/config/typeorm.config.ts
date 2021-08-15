@@ -10,7 +10,7 @@ export const typeOrmConfig : TypeOrmModuleOptions = {
     host: 'localhost',
     port: 3306,
     username: 'root',
-    password: 'Kpmysql1412*',   
+    password: '**********',   
     database: 'FireWater',
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
     synchronize: true,
